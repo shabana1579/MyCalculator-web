@@ -4,6 +4,7 @@ document.getElementsByTagName('input')[0].value;
 //function to display the input
 function display(num){
 
+    
     document.getElementsByTagName('input')[0].value+=num;
 
 }
@@ -13,28 +14,38 @@ function equal()
 {
     var exp=document.getElementsByTagName('input')[0].value;
     
-
-    if(exp)
+   if(exp)
     {
-        document.getElementsByTagName('input')[0].value= eval(exp)
-
-    }else 
-    
+     document.getElementsByTagName('input')[0].value= eval(exp)
+    }
+    else 
     {alert("Invalid Input")}
 
-    if(document.getElementsByTagName('input')[0].value==0)
-    {
-        clear();
-    }
 }
 
 //function to clear the input box
 function clear()
+
 {
-    document.getElementsByTagName('input')[0].value='';
+    var text1 = document.getElementsByTagName('input')[0].value;
+
+    var result = text1.substring(text1.length,text1.length);
+
+    document.getElementsByTagName('input')[0].value=result;
+
+
+/*let result = text.substring(1, 4);
+
+document.getElementById("demo").innerHTML = result;
+
+
+    var inputText=''
+    document.getElementsByTagName('input')[0].value=inputText;
+    }*/
+    
 }
 
-//funtion to delete the input from right to left one by one
+//function to delete the input from right to left one by one
 function delete1()
 {
     var exp=document.getElementsByTagName('input')[0].value;
@@ -43,6 +54,7 @@ function delete1()
 
     if(document.getElementsByTagName('input')[0].value==0)
     {
-        clear();
+        /*clear();*/
+        document.getElementsByTagName('input')[0].value=''
     }
 }
